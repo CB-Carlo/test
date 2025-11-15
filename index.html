@@ -5,12 +5,21 @@
     <title>Il mio sito</title>
 </head>
 <body>
-    ciao
+    <h1>ciao</h1>
 
+    <!-- Includi la libreria ACLib (sostituisci l'URL con quello corretto fornito dal network) -->
+    <script src="URL_DELLA_LIBRERIA_ACLIB.js"></script>
+
+    <!-- Script per mostrare il banner -->
     <script type="text/javascript">
-        aclib.runAutoTag({
-            zoneId: '89ldlfismo',
-        });
+        // Controllo che la libreria sia caricata
+        if (typeof aclib !== 'undefined') {
+            aclib.runAutoTag({
+                zoneId: '89ldlfismo', // sostituisci con il tuo zoneId reale
+            });
+        } else {
+            console.error('ACLib non è definita. Controlla il link alla libreria.');
+        }
     </script>
 </body>
 </html>
